@@ -63,7 +63,6 @@ var oDivText1=document.getElementById("text1");
 	var i2 = 0;
 	var timer = null;
 	timer = setInterval(function(){
-		console.log(1)
 		move(aSpan[i2],{opacity:1});
 		i2++;
 		if(i2 == str.length){
