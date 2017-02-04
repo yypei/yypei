@@ -1,0 +1,16 @@
+﻿@charset "utf-8";
+/* CSS Document */
+h1,h2,h3,h4,h5,h6,strong,p,ul,input,i,b,em,li,ol,dl,dd,body{font:14px/1 "微软雅黑";margin:0;padding:0;list-style:none;}
+/*strong{font-weight:normal;}*/
+/*p{margin:0;}*/
+a{color:#000;text-decoration:none;}
+/*ul{margin:0;padding:0; list-style:none;}*/
+input{outline:none; border:none;}
+img{border:none; display:block; /*vertical-align:top;*/}
+.clearfix:after{ content:""; display:block; clear:both;}
+.clearfix{zoom:1;} /*用来兼容IE6*/
+.fl{ float:left;}
+.fr{ float:right;}
+input::-ms-clear{ display:none;}
+input::-ms-reveal{ display:none;}
+li{list-style: none;}

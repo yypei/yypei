@@ -1,0 +1,385 @@
+.wrap{
+	width: 100%;
+	margin: 0 auto;
+	background:#2F2F2F;
+}
+/*头部开始*/
+.head{
+	width: 100%;
+	background: #ccc;
+}
+/*nav*/
+.navbox{
+	width:100%;
+	background:#2F2F2F;
+}
+.head a{color:#fff;}
+.head .nav{
+	height:76px; 
+	position:relative;
+}
+.head .nav h1{
+	position:absolute;
+	left:0;
+	top:0;
+	width:120px;
+	height:86px;
+	background:#549ec5; 
+	z-index:10000;
+}
+.head .nav h1 img{
+	display:block; 
+	padding:18px 26px;
+}
+.head .nav ul li{
+	float:left; 
+	border-left:1px solid #3c3b3b;
+}
+.head .nav ul li.active a{
+	color:#549ec5;
+}
+.head .nav ul li:hover a{
+	color:#549ec5;
+}
+.head .nav ul li.lastLi{
+	border-right:1px solid #3c3b3b;
+}
+.head .nav ul li a{
+	padding:0 26px; 
+	line-height:76px;
+}
+/*轮播图*/
+.head .container{
+	color: white;
+	position: relative;
+}
+.head .container ul{
+	width:100%;
+	height: 100%;
+}
+.head .container ul li{
+	width:100%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+}
+.head .container li img{
+	width:100%;
+	height: 100%;
+}
+.head .container ul li div{
+	position:absolute;
+	 width:400px;
+	 height:300px;
+	 left:50%;
+	 top:50%;
+	 margin-left:-200px;
+	 margin-top:-150px; 
+	 background:rgba(255,255,255,0.3);
+	 text-align:center;
+	 display:none;
+}
+.head .container ul li .d1{
+	 animation: ani1 2s linear;
+}
+.head .container ul li .d2{
+	 animation: ani2 2s linear;
+}
+.head .container ul li .d3{
+	 animation: ani3 2s linear;
+}
+@keyframes ani1{
+	0%{opacity:0; transform:translateY(-60px);}
+	50%{opacity:0.5; transform:translateY(30px);}
+	100%{opacity:1; transform:translateY(0px);}
+}
+@keyframes ani2{
+	0%{opacity:0; transform:translateX(-60px);}
+	50%{opacity:0.5; transform:translateX(30px);}
+	100%{opacity:1; transform:translateX(0px);}
+}
+@keyframes ani3{
+	0%{opacity:0; transform:translateY(60px);}
+	50%{opacity:0.5; transform:translateY(-30px);}
+	100%{opacity:1; transform:translateY(0px);}
+}
+.head .container ul li div h2{
+	font-size:40px; 
+	padding:100px 0 20px 0; 
+	font-weight:normal;
+}
+.head .container ul li div p{
+	font-size:16px; 
+	padding-bottom:20px;
+}
+.head .container:hover ol.dot{
+	display:block;
+}
+.head .container ol.dot{
+	position:absolute;
+	width:48px;
+	height:10px;
+	left:50%;
+	margin-left:-24px;
+	bottom:20px; 
+	overflow:hidden; 
+	z-index:10;
+	display:none;
+}
+.head .container ol.dot li{
+	width:10px;
+	height:10px;
+	margin-left:6px; 
+	background:rgba(255,255,255,0.4); 
+	float:left;
+}
+.head .container ol.dot li.active{
+	background:rgba(255,255,255,0.8);
+}
+.head .container:hover a.btn{display:block;}
+.head .container .btn{
+	position:absolute;
+	top:50%;
+	margin-top:-20px;
+	width:60px;
+	height:40px; 
+	font-size:60px; 
+	color:#FFF;
+ 	z-index:30; 
+ 	opacity:0.4; 
+ 	display:none;
+}
+#next{right:10px;}
+#prev{left:10px;}
+.head .container a.active{opacity:1;}
+#next:hover{opacity:1;}
+#prev:hover{opacity:1;}
+/*头部结束*/
+/*内容开始*/
+/*介绍*/
+.content .introduce{
+	/*height: 200px;
+	text-align: center;
+	line-height: 200px;
+	font-size: 30px;*/
+	position: relative;
+	height:400px;
+}
+.content .text1{
+	width:600px;
+	height:260px;
+	border:1px solid #ccc;
+	position:absolute; 
+	left:50%;
+	bottom:60px; 
+	border-radius:10px;
+	line-height:30px; 
+	padding:20px;
+	margin-left: -300px;
+	color: #669999;
+}
+.content .text1 span{float:left; font-size:16px; opacity:0;}
+.content .text1 p{position:absolute; bottom:10px; right:10px; width:180px;height:80px;}
+.content .text1 p img{width:100%; height:100%;opacity:0.6}
+
+/*作品*/
+.content .caseBox{
+	width: 100%;
+}
+.content .caseBox .case{
+	width:70%;
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+}
+.content .caseBox .case li{
+	position: absolute;
+	left: 0;
+	top: -600px;
+	width: 100%;
+	height: 600px;
+}
+.content .caseBox .case li.active{
+	transform: translateY(600px);
+}
+.content .caseBox .case li:nth-child(1){
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+}
+.content .caseBox .case li:nth-child(2){
+	position: relative;
+}
+.content .caseBox .case li:nth-child(2) div{
+	width: 25%;
+	height: 60px;
+	margin-top:280px;
+	float: left;
+	border: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	font-size: 20px;
+	line-height: 60px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.content .caseBox .case li:nth-child(2) div:last-child{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(102,204,153,0.5);
+	z-index: -1;
+}
+.content .caseBox .case li:nth-child(2) div a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+.content .caseBox .case li:nth-child(3) .box{
+	width: 510px;
+	height:510px;
+	margin:60px auto;
+}
+.content .caseBox .case li:nth-child(3) .box .list{
+	width: 148px;
+	height: 148px;
+	margin: 10px;
+	float: left;
+	border: 1px solid #ccc;
+	background-size: cover;
+	z-index:1;
+	position:relative;
+	transition:0.3s;
+}
+.content .caseBox .case li:nth-child(3) .box .list:hover{
+	transition: 0.3s;
+	transform: scale(1.5,1.5);
+	z-index: 2;
+}
+.content .caseBox .case li:nth-child(4){
+	perspective: 1000px;
+}
+.content .caseBox .case li:nth-child(4) .box{
+	width: 200px;
+	height: 200px;
+	margin: 150px auto;
+	position: relative;
+	transform-style: preserve-3d;
+	transform: rotateX(-15deg);
+}
+.content .caseBox .case li:nth-child(4) .box .block{
+	width: 200px;
+	height: 200px;
+	background-size: cover;
+	border-radius: 10px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	box-shadow: 0 0 10px gray;
+}
+.content .caseBox .case li:nth-child(4) .box div .shadow{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	position: absolute;
+	left: 0;
+	top: 210px;
+	border-radius: 10px;
+	transform: scale(1,-1);
+	-webkit-mask: linear-gradient(rgba(0,0,0,0) 60%,red);
+}
+
+.content .caseBox .case .card{
+	width: 510px;
+	height:510px;
+	margin:60px auto;
+}
+.btns {
+	width:360px;
+	text-align:center;
+	position: absolute;
+    bottom:50px;
+    left:50%;
+    height: 32px;
+     margin-left:-180px; 
+     z-index:1000;
+    }
+.btns input {width:60px; height:32px; font-size:16px; font-family:华文新魏; border:1px solid rgba(0,0,0,0.2);
+ border-radius:5px; color:#fff; cursor:pointer;  transition:all 1s ease;}
+.btns input:hover{ transform:rotate(30deg) translate(-10px,-10px);}
+.btn_01{
+    background:#783B81;
+}
+.btn_02{
+    background:#FA1527;
+}
+.btn_03{
+    background:#81D343;
+}
+.btn_04{
+    background:#29D5DC;
+}
+.btn_05{
+    background:#F95E28;
+}
+.content .caseBox .menu{
+	width:100px;
+	height:600px;
+	margin-left: 180px;
+}
+.content .caseBox .menu li{
+	height: 100px;
+	font-size:16px; 
+	cursor:pointer; 
+	text-align:center;
+	line-height: 100px;
+	color: #fff;
+}
+.content .caseBox .menu li.active{
+	height:98px;
+	border-bottom:2px solid #699;
+}
+/*技能*/
+.jinengBox{
+	margin:20px 0;
+}
+.content .maskContact{position:relative;width:100%;height:100%;}
+#ulJnyl li{float:left; position:relative;width:200px; height:250px; background:rgba(255,255,255,0.3); margin:10px;text-align:center;overflow:hidden; border-radius:6px; border:1px solid #ccc; color:#fff;}
+#ulJnyl li div{width:100%;height:100%;}
+#ulJnyl li div h3{width:100%;height:50px;line-height:50px; padding-top:60px;color:#fff;font-size:30px; font-weight:normal;}
+#ulJnyl li div p{font-size:14px;line-height:26px;}
+#ulJnyl li span{ position:absolute;left:-200px;top:0;width:200px; height:250px; background:pink;font-size:30px; color:#fff;border-radius:6px;text-align:center; z-index:100;}
+#ulJnyl li span p{line-height:30px;font-size:26px; padding-top:90px;}
+/*联系我  一定要有一层遮罩不然会有错*/
+.content .contactBox{ background:url(../images/css3.jpg);background-attachment: fixed;color:#fff;}
+.content .contactBox .contact{width:800px;height:500px;position:absolute;right:100px;top:80px;border-radius:10px; border:6px solid #CCC; background:rgba(153,153,153,0.5); text-align:center;}
+.content .contactBox .contact h2{font-size:30px;font-weight:normal; padding:200px 0 20px 0;}
+.content .contactBox .contact p{font-size:20px;line-height:40px;}
+/*内容结束*/
+/*尾部开始*/
+.foot{
+	width: 100%;
+	height: 600px;
+	position: relative;
+	background:url(../img/css3.jpg) no-repeat;color:#fff;
+	background-attachment: fixed;
+}
+.foot .contactBox .contact{
+	width:800px;
+	height:500px;
+	position:absolute;
+	right:100px;
+	top:80px;
+	border-radius:10px; 
+	border:6px solid #CCC;
+	background:rgba(153,153,153,0.5);
+	text-align:center;
+}
+.foot .contactBox .contact h2{
+	font-size:30px;
+	font-weight:normal;
+	 padding:200px 0 20px 0;
+}
+.foot .contactBox .contact p{
+	font-size:20px;
+	line-height:40px;
+}
